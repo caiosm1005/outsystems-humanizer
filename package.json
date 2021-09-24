@@ -1,0 +1,26 @@
+{
+  "name": "outsystems-humanizer",
+  "version": "1.0.0",
+  "description": "Humanizer Port for OutSystems\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caiosm1005/outsystems-humanizer.git"
+  },
+  "keywords": [
+    "humanizer",
+    "outsystems"
+  ],
+  "author": "Caio Santana Magalhães <caiosm1005@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caiosm1005/outsystems-humanizer/issues"
+  },
+  "homepage": "https://github.com/caiosm1005/outsystems-humanizer#readme",
+  "dependencies": {
+    "@alduino/humanizer": "^1.1.0"
+  }
+}
