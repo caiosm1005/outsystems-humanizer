@@ -1,1 +1,1 @@
-# outsystems-humanizer
+# outsystems-humanizer-js
