@@ -1,7 +1,17 @@
 var humanizerString = require( "@alduino/humanizer/string" );
-var humanizerDateTime = require( "@alduino/humanizer/dateTime" );
 var humanizerNumber = require( "@alduino/humanizer/number" );
+var humanizerDateTime = require( "@alduino/humanizer/dateTime" );
+var humanizerDateTimeDefaultStrategy = require( "../node_modules/@alduino/humanizer/dist/dateTime/DefaultDateTimeHumanizeStrategy.js" );
 
+// Add wrappers for DateTime Humanizer object
+var humanizerDateTimeWrapper = function( time, from, strategy ) {
+	if ( ! strategy ) {
+		strategy = new humanizerDateTimeDefaultStrategy.default();
+	}
+	return humanizerDateTime.default( time, from, strategy );
+};
+
+// Define the global Humanizer object
 window.humanizer = {
 	string: {
 		humanize: humanizerString.humanize,
@@ -24,7 +34,7 @@ window.humanizer = {
 		defaultVocabulary: humanizerString.defaultVocabulary
 	},
 	dateTime: {
-		humanize: humanizerDateTime.default
+		humanize: humanizerDateTimeWrapper
 	},
 	number: {
 		words: humanizerNumber.words
